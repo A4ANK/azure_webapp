@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="/static/css/style.css" rel="stylesheet">
+  <style>
+  input[type=submit] {
+    padding: 5px 15px;
+    background: #99e0b2;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  </style>
+  </head>  
+  <body>
+    <h1>Redis Cache Based User's session store.</h1>
+    <form method="post">
+    <p><input type=text placeholder="Enter username"  name=username id="user">
+    <p><input type=password placeholder="Enter password"  name=password id="passwd">
+    <script> 
+      function showPasswd(){
+        var x = document.getElementById("passwd");
+        if(x.type === "password") {
+          x.type = "text";
+        }else {
+          x.type = "password";
+        }
+      } 
+    </script> 
+    <p><input type="checkbox" onclick="showPasswd()">Show Password
+    <p><input type=submit value=Login>
+    </form>
+
+    <p><a href="/"><input type="submit" value="Home Page"></a><br>
+  </body>
+</html>'

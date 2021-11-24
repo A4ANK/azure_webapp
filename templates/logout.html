@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+  input[type=submit] {
+    padding: 5px 15px;
+    background: #99e0b2;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  </style>
+  </head>
+  <body>
+    <p>
+    <h1>Logged in as username: <i>{{ username|safe }}</i>.</h1>
+    <h2><p><i>Number of visits in the current session</i> = <b> {{ visits |safe }} </h2>
+
+    <p>Current ttl is set to 10 seconds for an active session.<br>
+    <p>if request is sent to the server within ttl then the active session will be expired<br>
+    
+    <br>
+    <br>
+    <br>
+    <p><b>Adding more feature for authorization (ACLs) and securing the user's sessions.
+
+    <br>
+    <p><a href="/logout"><input type="submit" value="Logout"></a><br>
+    <p>On Logout, current user's session will be deleted from the cache.</a>
+  </body>
+</html>
+
